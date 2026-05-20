@@ -13,20 +13,20 @@ python3 -m http.server 8000
 
 ## Deploy to GitHub Pages
 
-Target URL: `https://luomingshuang.github.io/MotionVerse/`
+Target URL: `https://vipl-vismod.github.io/MotionVerse/`
 
-1. Create a new GitHub repo named `MotionVerse` under the `luomingshuang` account.
+1. Create a new GitHub repo named `MotionVerse` under the `VIPL-VISMOD` account.
 2. From this directory:
    ```bash
    git init
    git add .
    git commit -m "Initial MotionVerse project page"
    git branch -M main
-   git remote add origin git@github.com:luomingshuang/MotionVerse.git
+   git remote add origin git@github.com:VIPL-VISMOD/MotionVerse.git
    git push -u origin main
    ```
 3. On GitHub: **Settings → Pages → Branch: `main` / root** → Save.
-4. Wait ~1 min, then visit `https://luomingshuang.github.io/MotionVerse/`.
+4. Wait ~1 min, then visit `https://vipl-vismod.github.io/MotionVerse/`.
 
 ## What to fill in
 
