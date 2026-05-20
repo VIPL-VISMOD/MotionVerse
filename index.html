@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotionVerse</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            MotionVerse: <span class="subtitle-inline">A Unified Multimodal Framework for Motion Comprehension, Generation and Editing</span>
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="#" target="_blank">Ruibing Hou</a>,</span>
+            <span class="author-block"><a href="https://luomingshuang.github.io/" target="_blank">Mingshuang Luo</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Hongyu Pan</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Hong Chang</a>,</span>
+            <span class="author-block"><a href="#" target="_blank">Shiguang Shan</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Institute of Computing Technology, Chinese Academy of Sciences</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2509.23635" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/luomingshuang/MotionVerse" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#video" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-video"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span>Data</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEASER / TASK OVERVIEW ============== -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/tasks.png" alt="MotionVerse task overview" id="pipeline">
+      <h2 class="subtitle has-text-centered">
+        Overview of the motion-related tasks unified under <span class="dnerf">MotionVerse</span>,
+        spanning single-person and multi-person comprehension, generation, and editing.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ABSTRACT ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper proposes <strong>MotionVerse</strong>, a unified framework that harnesses the
+            capabilities of Large Language Models (LLMs) to comprehend, generate, and edit human motion
+            in both single-person and multi-person scenarios. To efficiently represent motion data, we
+            employ a motion tokenizer with residual quantization, which converts continuous motion
+            sequences into multi-stream discrete tokens.
+          </p>
+          <p>
+            Furthermore, we introduce a <strong>Delay Parallel Modeling</strong> strategy, which
+            temporally staggers the encoding of residual token streams. This design enables LLMs to
+            effectively capture inter-stream dependencies while maintaining computational efficiency
+            comparable to single-stream modeling. Moreover, to alleviate modality interference between
+            motion and language, we design a <strong>dual-tower architecture</strong> with
+            modality-specific parameters, ensuring stable integration of motion information for both
+            comprehension and generation tasks.
+          </p>
+          <p>
+            Comprehensive ablation studies demonstrate the effectiveness of each component in
+            MotionVerse, and extensive experiments showcase its superior performance across a wide
+            range of motion-relevant tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== VIDEO ============== -->
+<section class="section" id="video">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/REPLACE_VIDEO_ID"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GENERATION: T2M ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Text-to-Motion (T2M)</h2>
+    <p class="has-text-centered">Single-person motion generation from textual descriptions. <em>Benchmark: MotionX.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/t2m_1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">"A person walks forward and picks things up and puts them down."</p>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/t2m_2.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">"A person is walking forward while holding something with their right hand."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GENERATION: I-T2M ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Interactive Text-to-Motion (I-T2M)</h2>
+    <p class="has-text-centered">Two-person interactive motion generation from text. <em>Benchmarks: InterHuman, InterX.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/it2m_1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">"Two humans are practicing taekwondo, crouching halfway while clenching their fists, and executing different types of punches."</p>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/it2m_2.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">"One's left hand and the other's right hand hit the ground at the same time."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COMPREHENSION: M2T ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Motion-to-Text (M2T)</h2>
+    <p class="has-text-centered">Single-person motion captioning. <em>Benchmark: MotionX.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/m2t_1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/m2t_2.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COMPREHENSION: I-M2T ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Interactive Motion-to-Text (I-M2T)</h2>
+    <p class="has-text-centered">Captioning of two-person interactive motion. <em>Benchmarks: InterHuman, InterX.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/im2t_1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/im2t_2.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GENERATION: M2M ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Motion-to-Motion (M2M)</h2>
+    <p class="has-text-centered">Single-person motion prediction and motion in-betweening. <em>Benchmark: MotionX.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/m2m_pred.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">Motion Prediction</p>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/m2m_inb.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">Motion In-betweening</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GENERATION: I-M2M ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Interactive Motion-to-Motion (I-M2M)</h2>
+    <p class="has-text-centered">Two-person motion prediction and in-betweening. <em>Benchmarks: InterHuman, InterX.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/im2m_pred.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">Interactive Motion Prediction</p>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/im2m_inb.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">Interactive Motion In-betweening</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== REACTION ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Motion Reaction (React)</h2>
+    <p class="has-text-centered">Given one person's motion, generate a plausible reaction from the other. <em>Benchmarks: InterHuman, InterX.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/react_1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/react_2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EDITING ============== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Motion Editing (Edit)</h2>
+    <p class="has-text-centered">Edit existing motion via natural-language instructions. <em>Benchmark: MotionFix.</em></p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/edit_1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered"><em>Edit instruction:</em> "do it harder 4 times and sidestep left"</p>
+      </div>
+      <div class="column is-half">
+        <video controls muted loop playsinline width="100%">
+          <source src="./static/videos/edit_2.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered"><em>Edit instruction:</em> TODO</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BIBTEX ============== -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre id="bibtex-block"><code>@article{hou2025motionverse,
+  title={MotionVerse: A Unified Multimodal Framework for Motion Comprehension, Generation and Editing},
+  author={Hou, Ruibing and Luo, Mingshuang and Pan, Hongyu and Chang, Hong and Shan, Shiguang},
+  journal={arXiv preprint arXiv:2509.23635},
+  year={2025}
+}</code></pre>
+    <button class="button is-small" id="copy-bibtex">
+      <span class="icon"><i class="fas fa-copy"></i></span>
+      <span>Copy</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <p>
+          Page template borrowed from
+          <a href="https://nerfies.github.io/">Nerfies</a> &amp;
+          <a href="https://luomingshuang.github.io/M3GPT/">M3GPT</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./static/js/index.js"></script>
+</body>
+</html>
