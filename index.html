@@ -135,18 +135,58 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Text-to-Motion (T2M)</h2>
     <p class="has-text-centered">Single-person motion generation from textual descriptions. <em>Benchmark: MotionX.</em></p>
-    <div class="columns is-multiline">
-      <div class="column is-half">
-        <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/t2m_1.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered">"A person walks forward and picks things up and puts them down."</p>
+
+    <div class="box mt-4">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "The person uses the doorknob to open the door."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_door_knob_use/GRAB_s10_doorknob_use_1_gt_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_door_knob_use/GRAB_s10_doorknob_use_1_pred_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-      <div class="column is-half">
-        <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/t2m_2.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered">"A person is walking forward while holding something with their right hand."</p>
+    </div>
+
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "A person steps out to kick punches to the right."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/fitness_subset_0078_step_out_to_kick_punches_R_clip_92/fitness_subset_0078_Step_Out_To_Kick_Punches_R_clip_92_gt_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/fitness_subset_0078_step_out_to_kick_punches_R_clip_92/fitness_subset_0078_Step_Out_To_Kick_Punches_R_clip_92_pred_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "A man makes a Battle Motion Straight Punch."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3_gt_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3_pred_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </div>
@@ -157,18 +197,58 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Interactive Text-to-Motion (I-T2M)</h2>
     <p class="has-text-centered">Two-person interactive motion generation from text. <em>Benchmarks: InterHuman, InterX.</em></p>
-    <div class="columns is-multiline">
-      <div class="column is-half">
-        <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/it2m_1.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered">"Two humans are practicing taekwondo, crouching halfway while clenching their fists, and executing different types of punches."</p>
+
+    <div class="box mt-4">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "Both stand facing each other; one approaches the other and greets with a handshake."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/inter/text-to-inter_motion/533/533_gt_ait_side_side_auto.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/inter/text-to-inter_motion/533/533_pred_ait_side_side_auto.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-      <div class="column is-half">
-        <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/it2m_2.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered">"One's left hand and the other's right hand hit the ground at the same time."</p>
+    </div>
+
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "One person attacks while the other avoids; taekwondo practice with offensive and defensive movements."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/inter/text-to-inter_motion/558/558_gt_ait_side_side_auto.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/inter/text-to-inter_motion/558/558_pred_ait_side_side_auto.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "They engage in a fencing bout, where they continuously lunge and parry."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/inter/text-to-inter_motion/1007/1007_gt_ait_side_side_auto.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/inter/text-to-inter_motion/1007/1007_pred_ait_side_side_auto.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </div>
@@ -179,18 +259,24 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Motion-to-Text (M2T)</h2>
     <p class="has-text-centered">Single-person motion captioning. <em>Benchmark: MotionX.</em></p>
-    <div class="columns is-multiline">
-      <div class="column is-half">
+    <div class="columns is-multiline mt-4">
+      <div class="column is-one-third">
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/m2t_1.mp4" type="video/mp4">
+          <source src="./data_vis/motion-x/motion-to-text/fitness_subset_0109_Swivel_Jump_To_Knee_Tucks_F_clip_60_gt_ybot_front.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "Someone is performing a Swivel Jump To Knee Tucks F."</p>
       </div>
-      <div class="column is-half">
+      <div class="column is-one-third">
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/m2t_2.mp4" type="video/mp4">
+          <source src="./data_vis/motion-x/motion-to-text/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3_gt_ybot_front.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "A warrior executes a Battle Motion Straight Punch."</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-to-text/HAA500_subset_0021_Tennis_Serve_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "A woman is serving the tennis ball."</p>
       </div>
     </div>
   </div>
@@ -201,18 +287,24 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Interactive Motion-to-Text (I-M2T)</h2>
     <p class="has-text-centered">Captioning of two-person interactive motion. <em>Benchmarks: InterHuman, InterX.</em></p>
-    <div class="columns is-multiline">
-      <div class="column is-half">
+    <div class="columns is-multiline mt-4">
+      <div class="column is-one-third">
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/im2t_1.mp4" type="video/mp4">
+          <source src="./data_vis/inter/inter_motion-to-text/555_gt_ait_side_side_auto.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "The other person lashes out with a right leg kick at the first person's waist, forcing the first person to take a step back."</p>
       </div>
-      <div class="column is-half">
+      <div class="column is-one-third">
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/im2t_2.mp4" type="video/mp4">
+          <source src="./data_vis/inter/inter_motion-to-text/557_gt_ait_side_side_auto.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered"><strong>Generated caption:</strong> TODO</p>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "The second one attempts to kick the first one, but the first one evades the kick by stepping back with the left leg."</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_motion-to-text/G001T000A001R009_gt_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "The other person rushes forward, attempting to pierce one's chest with a sword. One deflects the attack by swinging their own sword."</p>
       </div>
     </div>
   </div>
@@ -223,18 +315,64 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Motion-to-Motion (M2M)</h2>
     <p class="has-text-centered">Single-person motion prediction and motion in-betweening. <em>Benchmark: MotionX.</em></p>
-    <div class="columns is-multiline">
+
+    <h3 class="title is-5 has-text-centered mt-5">Motion Prediction</h3>
+    <div class="columns">
       <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/m2m_pred.mp4" type="video/mp4">
+          <source src="./data_vis/motion-x/motion-prediction/humanml_M008966/humanml_M008966_gt_ybot_front.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered">Motion Prediction</p>
       </div>
       <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/m2m_inb.mp4" type="video/mp4">
+          <source src="./data_vis/motion-x/motion-prediction/humanml_M008966/humanml_M008966_pred_ybot_front.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered">Motion In-betweening</p>
+      </div>
+    </div>
+    <div class="columns mt-2">
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-prediction/aist_subset_0000_Dance_Break_3_Step_clip_12/aist_subset_0000_Dance_Break_3_Step_clip_12_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-prediction/aist_subset_0000_Dance_Break_3_Step_clip_12/aist_subset_0000_Dance_Break_3_Step_clip_12_pred_ybot_front.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <h3 class="title is-5 has-text-centered mt-5">Motion In-betweening</h3>
+    <div class="columns">
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-inbetween/GRAB_s6_gamecontroller_pass_1_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-inbetween/GRAB_s6_gamecontroller_pass_1_inbetween_ybot_front.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="columns mt-2">
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-inbetween/idea400_subset_0011_Putting_In_The_Bag_And_Walking_At_The_Same_Time_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-inbetween/idea400_subset_0011_Putting_In_The_Bag_And_Walking_At_The_Same_Time_inbetween_ybot_front.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -245,18 +383,36 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Interactive Motion-to-Motion (I-M2M)</h2>
     <p class="has-text-centered">Two-person motion prediction and in-betweening. <em>Benchmarks: InterHuman, InterX.</em></p>
-    <div class="columns is-multiline">
+
+    <h3 class="title is-5 has-text-centered mt-5">Interactive Motion Prediction</h3>
+    <div class="columns">
       <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/im2m_pred.mp4" type="video/mp4">
+          <source src="./data_vis/inter/inter_prediction_inbetween/4896_gt_ait_side_side_auto.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered">Interactive Motion Prediction</p>
       </div>
       <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/im2m_inb.mp4" type="video/mp4">
+          <source src="./data_vis/inter/inter_prediction_inbetween/4896_pred_ait_side_side_auto.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered">Interactive Motion In-betweening</p>
+      </div>
+    </div>
+
+    <h3 class="title is-5 has-text-centered mt-5">Interactive Motion In-betweening</h3>
+    <div class="columns">
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/1006_gt_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-half">
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/1006_inbetween_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
