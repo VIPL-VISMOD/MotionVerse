@@ -1,0 +1,2 @@
+gt: the first one stands with open arms while the second one lifts their left leg to gaze at the sky.
+pred: one person extends both arms to the sides, while the other person leans to the right.

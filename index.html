@@ -149,93 +149,44 @@
     <h2 class="title is-3 has-text-centered">Text-to-Motion (T2M)</h2>
     <p class="has-text-centered">Single-person motion generation from textual descriptions. <em>Benchmark: MotionX.</em></p>
 
-    <div class="box mt-4">
-      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "The person uses the doorknob to open the door."</p>
-      <div class="columns">
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_door_knob_use/GRAB_s10_doorknob_use_1_gt_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_door_knob_use/GRAB_s10_doorknob_use_1_pred_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="columns is-multiline mt-4">
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_door_knob_use/GRAB_s10_doorknob_use_1_pred_mesh.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2">"The person uses the doorknob to open the door."</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_pyramidmedium/GRAB_s10_pyramidmedium_inspect_1_pred_mesh.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2">"A worker is inspecting a pyramid."</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/text-to-motion/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3_pred_mesh.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2">"A man makes a Battle Motion Straight Punch."</p>
       </div>
     </div>
-
-    <div class="box">
-      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "A person steps out to kick punches to the right."</p>
-      <div class="columns">
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/fitness_subset_0078_step_out_to_kick_punches_R_clip_92/fitness_subset_0078_Step_Out_To_Kick_Punches_R_clip_92_gt_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/fitness_subset_0078_step_out_to_kick_punches_R_clip_92/fitness_subset_0078_Step_Out_To_Kick_Punches_R_clip_92_pred_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/text-to-motion/fitness_subset_0011_Rcl_Squats_clip_4/fitness_subset_0011_Rcl_Squats_clip_4_pred_mesh.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2">"The person is doing squats."</p>
       </div>
-    </div>
-
-    <div class="box">
-      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "A man makes a Battle Motion Straight Punch."</p>
-      <div class="columns">
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3_gt_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3/game_motion_subset_0000_Battle_Motion_Straight_Punch_Motion_clip_3_pred_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/text-to-motion/fitness_subset_0083_Jab_Jab_Cross_To_Scissor_Imp_P_clip_16/fitness_subset_0083_Jab_Jab_Cross_To_Scissor_Imp_P_clip_16_pred_mesh.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2">"A boxer is jabbing, crossing, and throwing scissor-like punches in a rhythmic pattern."</p>
       </div>
-    </div>
-
-    <div class="box">
-      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "The person is standing while building blocks."</p>
-      <div class="columns">
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/dea400_subset_0000_Standing_While_Building_Blocks/idea400_subset_0000_Standing_While_Building_Blocks_gt_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/dea400_subset_0000_Standing_While_Building_Blocks/idea400_subset_0000_Standing_While_Building_Blocks_pred_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-
-    <div class="box">
-      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "A worker is inspecting a pyramid."</p>
-      <div class="columns">
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_pyramidmedium/GRAB_s10_pyramidmedium_inspect_1_gt_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="column is-half">
-          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
-          <video controls muted loop playsinline width="100%">
-            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_pyramidmedium/GRAB_s10_pyramidmedium_inspect_1_pred_ybot_front.mp4" type="video/mp4">
-          </video>
-        </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/text-to-motion/humanml_M009072/humanml_M009072_pred_mesh.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2">"A person appears to be swimming."</p>
       </div>
     </div>
   </div>

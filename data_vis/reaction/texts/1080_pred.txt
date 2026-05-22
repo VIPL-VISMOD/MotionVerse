@@ -1,0 +1,2 @@
+gt: one extends their right hand and forms a rock sign, while the other person extends their right hand and forms a paper sign.
+pred: the two persons throw punches successively. the first one makes a scissor with their hand, while the other one shows a piece of cloth.

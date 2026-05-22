@@ -1,0 +1,2 @@
+gt: the first person pulls the second closer with a rope.
+pred: the first one throws a right-hand punch towards the second one, following up with a swift left-hand punch.

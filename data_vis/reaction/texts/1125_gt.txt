@@ -1,0 +1,2 @@
+gt: one person strikes the other, who then rotates and moves forward with three steps.
+pred: two people are standing shoulder to shoulder. one person holds the other's right hand with their left hand, and the other's left hand is placed on one person's right shoulder. then, one person lifts the right foot and

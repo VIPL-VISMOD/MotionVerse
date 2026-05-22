@@ -1,0 +1,2 @@
+gt: two people are moving to the opposite edges while making heart-shaped movements using their arms in synchrony.
+pred: the first one extends the right hand to show the second one the products on the right.

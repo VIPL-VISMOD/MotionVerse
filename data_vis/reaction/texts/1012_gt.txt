@@ -1,0 +1,2 @@
+gt: one pulls the sword back and takes a step away, while the other makes a swinging motion with the left hand and briefly looks to the left and then to the right.
+pred: the two guys warm up their swords, and the first person steps backwards to avoid the attack.

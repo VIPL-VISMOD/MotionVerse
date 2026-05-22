@@ -1,0 +1,2 @@
+gt: one holds onto the other's left hand with their right hand, while the other clutches onto a note with their left hand. they stroll and converse, with the other gesturing towards the note with their index finger as they speak.
+pred: two people walk hand in hand, with the second one pointing at a paper in their left hand using the right hand while looking towards the first person. they converse and laugh along the way.

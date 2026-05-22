@@ -1,0 +1,2 @@
+gt: two humans embrace each other.
+pred: two people grip hands, then one person extends the left arm forward, and the other person retracts the left arm.
