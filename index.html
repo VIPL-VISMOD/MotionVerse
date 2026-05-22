@@ -9,6 +9,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
   <link rel="stylesheet" href="./static/css/index.css">
+  <style>
+    .tl-bar { display: flex; height: 5px; border-radius: 2px; margin-top: 5px; overflow: hidden; }
+    .tl-gt  { background: #3273dc; }
+    .tl-out { background: #ff8c00; }
+    .tl-legend { font-size: 0.7rem; color: #888; margin-top: 3px; text-align: center; }
+    .tl-legend .gt-dot  { color: #3273dc; font-weight: bold; }
+    .tl-legend .out-dot { color: #ff8c00; font-weight: bold; }
+    .task-tag { display: inline-block; font-size: 0.7rem; font-weight: 700;
+                text-transform: uppercase; letter-spacing: .05em;
+                padding: 1px 6px; border-radius: 3px; margin-bottom: 4px; }
+    .task-tag.pred { background: #fff3e0; color: #e65100; }
+    .task-tag.inb  { background: #e3f2fd; color: #1565c0; }
+  </style>
 </head>
 <body>
 
@@ -189,6 +202,42 @@
         </div>
       </div>
     </div>
+
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "The person is standing while building blocks."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/dea400_subset_0000_Standing_While_Building_Blocks/idea400_subset_0000_Standing_While_Building_Blocks_gt_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/dea400_subset_0000_Standing_While_Building_Blocks/idea400_subset_0000_Standing_While_Building_Blocks_pred_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Text Prompt:</strong> "A worker is inspecting a pyramid."</p>
+      <div class="columns">
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_pyramidmedium/GRAB_s10_pyramidmedium_inspect_1_gt_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Generated</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/motion-x/text-to-motion/GRAB_s10_pyramidmedium/GRAB_s10_pyramidmedium_inspect_1_pred_ybot_front.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -279,6 +328,20 @@
         <p class="has-text-centered mt-2"><strong>Generated:</strong> "A woman is serving the tennis ball."</p>
       </div>
     </div>
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-to-text/EgoBody_recording_20210921_S05_S12_01_body_idx_1_004_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "A person sits down for casual conversation."</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-to-text/humanml_005039_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "A person walks slightly to their left casually."</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -304,7 +367,21 @@
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/inter/inter_motion-to-text/G001T000A001R009_gt_ait_side_side_auto.mp4" type="video/mp4">
         </video>
-        <p class="has-text-centered mt-2"><strong>Generated:</strong> "The other person rushes forward, attempting to pierce one's chest with a sword. One deflects the attack by swinging their own sword."</p>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "The other person rushes forward attempting to pierce one's chest with a sword. One deflects the attack by swinging their own sword."</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_motion-to-text/1004_gt_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "One person extends the left leg to launch an attack; the other pulls back their right leg to avoid."</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_motion-to-text/561_gt_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2"><strong>Generated:</strong> "The two are assuming attacking positions facing each other."</p>
       </div>
     </div>
   </div>
@@ -314,65 +391,128 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Motion-to-Motion (M2M)</h2>
-    <p class="has-text-centered">Single-person motion prediction and motion in-betweening. <em>Benchmark: MotionX.</em></p>
+    <p class="has-text-centered">Single-person motion prediction and in-betweening. <em>Benchmark: MotionX.</em></p>
+    <p class="has-text-centered is-size-7 mt-2 tl-legend">
+      Timeline: <span class="gt-dot">■</span> GT (given frames) &nbsp; <span class="out-dot">■</span> Model output
+    </p>
 
-    <h3 class="title is-5 has-text-centered mt-5">Motion Prediction</h3>
-    <div class="columns">
+    <!-- Prediction case 1 -->
+    <div class="columns mt-4">
       <div class="column is-half">
+        <span class="task-tag pred">Motion Prediction</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-prediction/humanml_M008966/humanml_M008966_gt_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
       </div>
       <div class="column is-half">
+        <span class="task-tag pred" style="visibility:hidden">·</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-prediction/humanml_M008966/humanml_M008966_pred_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:80%"></div></div>
       </div>
     </div>
+
+    <!-- Prediction case 2 -->
     <div class="columns mt-2">
       <div class="column is-half">
+        <span class="task-tag pred">Motion Prediction</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-prediction/aist_subset_0000_Dance_Break_3_Step_clip_12/aist_subset_0000_Dance_Break_3_Step_clip_12_gt_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
       </div>
       <div class="column is-half">
+        <span class="task-tag pred" style="visibility:hidden">·</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-prediction/aist_subset_0000_Dance_Break_3_Step_clip_12/aist_subset_0000_Dance_Break_3_Step_clip_12_pred_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:80%"></div></div>
       </div>
     </div>
 
-    <h3 class="title is-5 has-text-centered mt-5">Motion In-betweening</h3>
-    <div class="columns">
+    <!-- Prediction case 3 -->
+    <div class="columns mt-2">
       <div class="column is-half">
+        <span class="task-tag pred">Motion Prediction</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-prediction/perform_subset_0000_Cook_clip_1/perform_subset_0000_Cook_clip_1_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
+      </div>
+      <div class="column is-half">
+        <span class="task-tag pred" style="visibility:hidden">·</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-prediction/perform_subset_0000_Cook_clip_1/perform_subset_0000_Cook_clip_1_pred_ybot_front.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:80%"></div></div>
+      </div>
+    </div>
+
+    <!-- In-betweening case 1 -->
+    <div class="columns mt-4">
+      <div class="column is-half">
+        <span class="task-tag inb">Motion In-betweening</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-inbetween/GRAB_s6_gamecontroller_pass_1_gt_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
       </div>
       <div class="column is-half">
+        <span class="task-tag inb" style="visibility:hidden">·</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-inbetween/GRAB_s6_gamecontroller_pass_1_inbetween_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:60%"></div><div class="tl-gt" style="width:20%"></div></div>
       </div>
     </div>
+
+    <!-- In-betweening case 2 -->
     <div class="columns mt-2">
       <div class="column is-half">
+        <span class="task-tag inb">Motion In-betweening</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-inbetween/fitness_subset_0011_Rainbow_To_Cross_Crunch_F_clip_7_gt_ybot_front.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
+      </div>
+      <div class="column is-half">
+        <span class="task-tag inb" style="visibility:hidden">·</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/motion-x/motion-inbetween/fitness_subset_0011_Rainbow_To_Cross_Crunch_F_clip_7_inbetween_ybot_front.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:60%"></div><div class="tl-gt" style="width:20%"></div></div>
+      </div>
+    </div>
+
+    <!-- In-betweening case 3 -->
+    <div class="columns mt-2">
+      <div class="column is-half">
+        <span class="task-tag inb">Motion In-betweening</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-inbetween/idea400_subset_0011_Putting_In_The_Bag_And_Walking_At_The_Same_Time_gt_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
       </div>
       <div class="column is-half">
+        <span class="task-tag inb" style="visibility:hidden">·</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/motion-x/motion-inbetween/idea400_subset_0011_Putting_In_The_Bag_And_Walking_At_The_Same_Time_inbetween_ybot_front.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:60%"></div><div class="tl-gt" style="width:20%"></div></div>
       </div>
     </div>
   </div>
@@ -383,36 +523,107 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Interactive Motion-to-Motion (I-M2M)</h2>
     <p class="has-text-centered">Two-person motion prediction and in-betweening. <em>Benchmarks: InterHuman, InterX.</em></p>
+    <p class="has-text-centered is-size-7 mt-2 tl-legend">
+      Timeline: <span class="gt-dot">■</span> GT (given frames) &nbsp; <span class="out-dot">■</span> Model output
+    </p>
 
-    <h3 class="title is-5 has-text-centered mt-5">Interactive Motion Prediction</h3>
-    <div class="columns">
+    <!-- Prediction case 1 -->
+    <div class="columns mt-4">
       <div class="column is-half">
+        <span class="task-tag pred">Motion Prediction</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/inter/inter_prediction_inbetween/4896_gt_ait_side_side_auto.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
       </div>
       <div class="column is-half">
+        <span class="task-tag pred" style="visibility:hidden">·</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/inter/inter_prediction_inbetween/4896_pred_ait_side_side_auto.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:80%"></div></div>
       </div>
     </div>
 
-    <h3 class="title is-5 has-text-centered mt-5">Interactive Motion In-betweening</h3>
-    <div class="columns">
+    <!-- Prediction case 2 -->
+    <div class="columns mt-2">
       <div class="column is-half">
+        <span class="task-tag pred">Motion Prediction</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/inter/inter_prediction_inbetween/1006_gt_ait_side_side_auto.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
       </div>
       <div class="column is-half">
+        <span class="task-tag pred" style="visibility:hidden">·</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Predicted</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/1006_pred_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:80%"></div></div>
+      </div>
+    </div>
+
+    <!-- In-betweening case 1 -->
+    <div class="columns mt-4">
+      <div class="column is-half">
+        <span class="task-tag inb">Motion In-betweening</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/4896_gt_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
+      </div>
+      <div class="column is-half">
+        <span class="task-tag inb" style="visibility:hidden">·</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/4896_inbetween_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:60%"></div><div class="tl-gt" style="width:20%"></div></div>
+      </div>
+    </div>
+
+    <!-- In-betweening case 2 -->
+    <div class="columns mt-2">
+      <div class="column is-half">
+        <span class="task-tag inb">Motion In-betweening</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/4909_gt_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
+      </div>
+      <div class="column is-half">
+        <span class="task-tag inb" style="visibility:hidden">·</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/4909_inbetween_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:60%"></div><div class="tl-gt" style="width:20%"></div></div>
+      </div>
+    </div>
+
+    <!-- In-betweening case 3 -->
+    <div class="columns mt-2">
+      <div class="column is-half">
+        <span class="task-tag inb">Motion In-betweening</span>
+        <p class="has-text-centered is-size-6 has-text-grey mb-1">Ground Truth</p>
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/inter/inter_prediction_inbetween/1006_gt_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:100%"></div></div>
+      </div>
+      <div class="column is-half">
+        <span class="task-tag inb" style="visibility:hidden">·</span>
         <p class="has-text-centered is-size-6 has-text-grey mb-1">In-betweened</p>
         <video controls muted loop playsinline width="100%">
           <source src="./data_vis/inter/inter_prediction_inbetween/1006_inbetween_ait_side_side_auto.mp4" type="video/mp4">
         </video>
+        <div class="tl-bar"><div class="tl-gt" style="width:20%"></div><div class="tl-out" style="width:60%"></div><div class="tl-gt" style="width:20%"></div></div>
       </div>
     </div>
   </div>
