@@ -585,16 +585,43 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Motion Reaction (React)</h2>
     <p class="has-text-centered">Given one person's motion, generate a plausible reaction from the other. <em>Benchmarks: InterHuman, InterX.</em></p>
-    <div class="columns is-multiline">
-      <div class="column is-half">
+    <p class="has-text-centered is-size-7 mt-2 tl-legend">
+      <span style="color:#3273dc; font-weight:bold;">■ Blue person</span> = Input motion &nbsp;
+      <span style="color:#e53e3e; font-weight:bold;">■ Red person</span> = Generated reaction
+    </p>
+
+    <div class="columns is-multiline mt-4">
+      <div class="column is-one-third">
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/react_1.mp4" type="video/mp4">
+          <source src="./data_vis/reaction/1012_pred_ait_side_side_auto.mp4" type="video/mp4">
         </video>
+        <p class="has-text-centered mt-2 is-size-7 has-text-grey"><strong>GT:</strong> one pulls the sword back and takes a step away, while the other makes a swinging motion with the left hand.</p>
       </div>
-      <div class="column is-half">
+      <div class="column is-one-third">
         <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/react_2.mp4" type="video/mp4">
+          <source src="./data_vis/reaction/104_pred_ait_side_side_auto.mp4" type="video/mp4">
         </video>
+        <p class="has-text-centered mt-2 is-size-7 has-text-grey"><strong>GT:</strong> one shoves the other while the other raises both hands to express powerlessness.</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/reaction/1106_pred_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2 is-size-7 has-text-grey"><strong>GT:</strong> the two step apart and stretch their arms out wide.</p>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/reaction/1122_pred_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2 is-size-7 has-text-grey"><strong>GT:</strong> two humans embrace each other.</p>
+      </div>
+      <div class="column is-one-third">
+        <video controls muted loop playsinline width="100%">
+          <source src="./data_vis/reaction/1125_pred_ait_side_side_auto.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2 is-size-7 has-text-grey"><strong>GT:</strong> one person strikes the other, who then rotates and moves forward with three steps.</p>
       </div>
     </div>
   </div>
