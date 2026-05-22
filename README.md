@@ -1,7 +1,8 @@
 # MotionVerse Project Page
 
-Static project page modeled after [M3GPT](https://luomingshuang.github.io/M3GPT/) and the
-[Nerfies](https://nerfies.github.io/) template.
+Static project page for MotionVerse.
+
+**Live page:** https://vipl-vismod.github.io/MotionVerse/
 
 ## Local preview
 
