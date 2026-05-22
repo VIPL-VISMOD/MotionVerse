@@ -32,7 +32,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            MotionVerse: <span class="subtitle-inline">A Unified Multimodal Framework for Motion Comprehension, Generation and Editing</span>
+            MotionVerse: <span class="subtitle-inline">Toward Unified Human Motion and Interaction Modeling</span>
           </h1>
 
           <div class="is-size-5 publication-authors">
@@ -102,25 +102,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper proposes <strong>MotionVerse</strong>, a unified framework that harnesses the
-            capabilities of Large Language Models (LLMs) to comprehend, generate, and edit human motion
-            in both single-person and multi-person scenarios. To efficiently represent motion data, we
-            employ a motion tokenizer with residual quantization, which converts continuous motion
-            sequences into multi-stream discrete tokens.
+            Existing motion-language frameworks primarily focus on isolated tasks such as single-person
+            motion generation or understanding, while more complex scenarios, including human interaction,
+            reaction, and motion editing, are typically addressed using task-specific architectures.
+            Despite sharing common motion semantics and temporal structures, these heterogeneous behaviors
+            are rarely unified within a single modeling paradigm, limiting transferable motion reasoning
+            and general-purpose motion intelligence.
           </p>
           <p>
-            Furthermore, we introduce a <strong>Delay Parallel Modeling</strong> strategy, which
-            temporally staggers the encoding of residual token streams. This design enables LLMs to
-            effectively capture inter-stream dependencies while maintaining computational efficiency
-            comparable to single-stream modeling. Moreover, to alleviate modality interference between
-            motion and language, we design a <strong>dual-tower architecture</strong> with
-            modality-specific parameters, ensuring stable integration of motion information for both
-            comprehension and generation tasks.
+            To address this limitation, we present <strong>MotionVerse</strong>, a unified motion-language
+            framework for modeling both individual and interactive human behaviors. MotionVerse adopts a
+            scalable multi-stream autoregressive formulation for residual motion tokens, enabling efficient
+            long-sequence modeling while preserving fine-grained motion dynamics. To alleviate modality
+            interference during joint optimization, we further introduce a modality-specialized
+            <strong>Motion-Fusion</strong> mechanism with dedicated adaptation pathways for motion and
+            language modeling.
           </p>
           <p>
-            Comprehensive ablation studies demonstrate the effectiveness of each component in
-            MotionVerse, and extensive experiments showcase its superior performance across a wide
-            range of motion-relevant tasks.
+            Extensive experiments across diverse motion-language tasks demonstrate that MotionVerse
+            achieves competitive performance in motion understanding, generation, interaction, reaction,
+            and editing, validating its effectiveness as a scalable and general-purpose framework for
+            unified motion modeling.
           </p>
         </div>
       </div>
@@ -632,18 +634,136 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Motion Editing (Edit)</h2>
     <p class="has-text-centered">Edit existing motion via natural-language instructions. <em>Benchmark: MotionFix.</em></p>
-    <div class="columns is-multiline">
-      <div class="column is-half">
-        <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/edit_1.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered"><em>Edit instruction:</em> "do it harder 4 times and sidestep left"</p>
+
+    <!-- Case 1 -->
+    <div class="box mt-4">
+      <p class="has-text-centered mb-3"><strong>Edit Instruction:</strong> "MAKE A WIDER TURN"</p>
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Source Motion</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000052_gt_p1_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-2 has-text-centered">
+          <span style="font-size:2rem; color:#888;">→</span>
+        </div>
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Edited Result</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000052_pred_p2_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-      <div class="column is-half">
-        <video controls muted loop playsinline width="100%">
-          <source src="./static/videos/edit_2.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered"><em>Edit instruction:</em> TODO</p>
+    </div>
+
+    <!-- Case 2 -->
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Edit Instruction:</strong> "Do the same faster the second time."</p>
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Source Motion</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000124_gt_p1_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-2 has-text-centered">
+          <span style="font-size:2rem; color:#888;">→</span>
+        </div>
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Edited Result</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000124_pred_p2_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3 -->
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Edit Instruction:</strong> "Do a handstand and keep legs open."</p>
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Source Motion</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000153_gt_p1_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-2 has-text-centered">
+          <span style="font-size:2rem; color:#888;">→</span>
+        </div>
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Edited Result</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000153_pred_p2_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 4 -->
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Edit Instruction:</strong> "Start the squat earlier."</p>
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Source Motion</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000180_gt_p1_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-2 has-text-centered">
+          <span style="font-size:2rem; color:#888;">→</span>
+        </div>
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Edited Result</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000180_pred_p2_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 5 -->
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Edit Instruction:</strong> "Take smaller careless steps instead of hasty."</p>
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Source Motion</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000219_gt_p1_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-2 has-text-centered">
+          <span style="font-size:2rem; color:#888;">→</span>
+        </div>
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Edited Result</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000219_pred_p2_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 6 -->
+    <div class="box">
+      <p class="has-text-centered mb-3"><strong>Edit Instruction:</strong> "Wave a bit slower and sway less."</p>
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Source Motion</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000495_gt_p1_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-2 has-text-centered">
+          <span style="font-size:2rem; color:#888;">→</span>
+        </div>
+        <div class="column is-5">
+          <p class="has-text-centered is-size-6 has-text-grey mb-1">Edited Result</p>
+          <video controls muted loop playsinline width="100%">
+            <source src="./data_vis/edit/000495_pred_p2_mesh.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </div>
